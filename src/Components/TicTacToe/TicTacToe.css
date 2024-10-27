@@ -1,0 +1,107 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling for centering and padding */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Board styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Box styling for each Tic Tac Toe cell */
+.boxes {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.boxes:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+/* Image inside the boxes */
+.boxes img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.85;
+    transition: transform 0.3s ease;
+}
+
+.boxes img:hover {
+    transform: scale(1.15);
+}
+
+/* Reset button styling */
+.reset {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #ffffff;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset:hover {
+    background-color: #f50057;
+}
+
+.reset:active {
+    transform: scale(0.98);
+}
+
+/* Animation for congratulatory message */
+.congratulations {
+    font-size: 2em;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
